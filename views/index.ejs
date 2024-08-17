@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <% if (locals.usernames) { %>
+        Usernames: <%= usernames.map(user => user.username).join(", ") %>
+    <% } %>
+    <br>
+    <a href="/new">New username</a>
+    <br>
+    <a href="/search">Search</a>
+    <form action="/delete" method="post">
+        <button type="submit">DELETE ALL USERNAMES</button>
+    </form>
+</body>
+</html>

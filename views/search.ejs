@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/search" method="GET">
+        <input type="text" name="search">
+        <button type="submit">Search</button>
+    </form>
+    <% if (locals.users) { %>
+        <h2>Found users:</h2>
+        <% users.map(user => { %>
+            <p>User id: <%= user.id %> </p>
+            <p>User name: <%= user.username %> </p>
+            <br>
+        <% }) %>
+    <% } %>
+</body>
+</html>
